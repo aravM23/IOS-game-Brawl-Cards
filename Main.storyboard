@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Brawl_Cards_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="sSz-nj-bJm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="JkB-QK-Mqj">
+                                <rect key="frame" x="182" y="58" width="50" height="50"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="GnY-p0-Pmh" userLabel="Cards and Button stack view">
+                                <rect key="frame" x="72" y="343" width="270" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0UT-dQ-weE" userLabel="Cards stack view">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card3" translatesAutoresizingMaskIntoConstraints="NO" id="8K3-Jx-ivu">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card10" translatesAutoresizingMaskIntoConstraints="NO" id="tkd-dF-a4d">
+                                                <rect key="frame" x="150" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hw-En-RGX" userLabel="Brawl button">
+                                        <rect key="frame" x="110" y="200" width="50" height="50"/>
+                                        <state key="normal" image="button"/>
+                                        <connections>
+                                            <action selector="brawltapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bq5-5U-mu4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="j8b-hP-hTO" userLabel="Player score">
+                                <rect key="frame" x="20" y="773.5" width="47" height="68.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0X-Vo-ym7">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5S-no-pco">
+                                        <rect key="frame" x="0.0" y="20.5" width="25" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ngf-PJ-cfR">
+                                <rect key="frame" x="359.5" y="773.5" width="34.5" height="68.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blt-Bg-ZDw">
+                                        <rect key="frame" x="0.0" y="0.0" width="34.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZy-Db-amM">
+                                        <rect key="frame" x="9.5" y="20.5" width="25" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GnY-p0-Pmh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1zQ-hk-a7u"/>
+                            <constraint firstAttribute="trailing" secondItem="sSz-nj-bJm" secondAttribute="trailing" id="6te-fw-2R6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j8b-hP-hTO" secondAttribute="bottom" constant="20" id="FT2-Ie-bGy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ngf-PJ-cfR" secondAttribute="trailing" constant="20" id="RcZ-cy-bOL"/>
+                            <constraint firstItem="sSz-nj-bJm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Srl-S5-p5q"/>
+                            <constraint firstItem="JkB-QK-Mqj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UHu-K6-VxW"/>
+                            <constraint firstItem="JkB-QK-Mqj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="a8q-hO-tsN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j8b-hP-hTO" secondAttribute="bottom" constant="20" id="aGX-3o-Khj"/>
+                            <constraint firstItem="GnY-p0-Pmh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="dbO-ga-ELS"/>
+                            <constraint firstAttribute="bottom" secondItem="sSz-nj-bJm" secondAttribute="bottom" id="mtc-Xh-IIp"/>
+                            <constraint firstItem="j8b-hP-hTO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s2e-Pl-z26"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ngf-PJ-cfR" secondAttribute="bottom" constant="20" id="urS-vE-eZI"/>
+                            <constraint firstItem="sSz-nj-bJm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vgU-hk-1WZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftimageview" destination="8K3-Jx-ivu" id="mB5-0v-NCl"/>
+                        <outlet property="leftscorelabel" destination="D5S-no-pco" id="Fk3-72-wy9"/>
+                        <outlet property="rightscorelabel" destination="mZy-Db-amM" id="NM4-5G-n2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="414" height="896"/>
+        <image name="button" width="50" height="50"/>
+        <image name="card10" width="120" height="170"/>
+        <image name="card3" width="120" height="170"/>
+        <image name="logo" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
